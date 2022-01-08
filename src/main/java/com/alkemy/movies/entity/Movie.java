@@ -17,11 +17,12 @@ public class Movie {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String imagen;
+    private String titulo;
 
     @Column(name="fecha_creacion")
     @DateTimeFormat(pattern = "yyyy/MM/dd")
     private LocalDate fechaCreacion;
-    private String calificacion;
+    private int calificacion;
 
     @ManyToOne(fetch= FetchType.EAGER, cascade= CascadeType.ALL)
     @JoinColumn(name="genre_id", insertable = false, updatable = false)

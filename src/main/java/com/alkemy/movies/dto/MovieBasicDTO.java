@@ -5,8 +5,9 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class GenreDTO {
+public class MovieBasicDTO {
     private Long id;
-    private String nombre;
+    private String titulo;
     private String imagen;
+    private String fechaCreacion;
 }
